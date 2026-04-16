@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "check": "node --check src/server.js && node --check src/mongo.js && node --check src/evaluator.js && node --check src/batchEvaluator.js && node --check scripts/migrate-end-of-stream.js && node --check scripts/evaluate.js",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "migrate:end-of-stream": "node scripts/migrate-end-of-stream.js",
+    "evaluate": "node scripts/evaluate.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^6.21.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

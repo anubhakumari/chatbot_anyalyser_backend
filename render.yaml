@@ -1,0 +1,10 @@
+# Render Blueprint — repo root is this backend folder (standalone repo).
+# Set MONGODB_URI and GEMINI_API_KEY in Dashboard → service → Environment.
+services:
+  - type: web
+    name: chatbot-anyalyser-api
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
